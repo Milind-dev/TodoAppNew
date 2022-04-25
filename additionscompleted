@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="Container">  
+        <div class="Todo__container">
+            <h1> Todo </h1>
+        </div>
+        <div class="Todo__items">
+            <input type="text" id="Todo__items_input" placeholder="todo"/>
+            <button id="add">Add</button>
+        </div>
+        <div id="Todo__modify">
+        </div>
+    </div>
+<script src="./scripts.js"></script>
+</body>
+</html>
+
+
+//adding inputs
+let arr = [];
+
+const adding = (e) => {
+    e.preventDefault()
+    let todoAdd = document.getElementById("Todo__items_input").value;
+    arr.push({
+        addData:todoAdd
+    })
+    //storing localstorage
+    localStorage.setItem("todoData",JSON.stringify(arr)) || [];
+    // console.log(localStorage.getItem("todoData"));
+    let pages  = JSON.parse(localStorage.getItem('todoData'));
+    if(pages == null){
+        arr = [];
+    }
+    else{
+        todoPage(pages);
+    }
+}
+
+
+var Todo__modify = document.getElementById("Todo__modify");
+let html = "";
+
+const todoPage = (pages) => {
+    console.log(pages)
+    
+    pages.forEach((element, index) => {
+    html = `<div class='flex mb-4 items-center'>
+    <p class='w-full text-grey-darkest'>${element["addData"]}</p>
+    <button onclick='edit(${index})' class='flex-no-shrink p-2 ml-4 mr-2 border-2 rounded text-white text-grey bg-green-600'>Edit</button>
+    <button onclick='deleteTodo(${index})' class='flex-no-shrink p-2 ml-2 border-2 rounded text-white bg-red-500'>Delete</button>
+ </div>`;
+}); 
+    Todo__modify.innerHTML += html;
+}
+
+//load listener
+window.addEventListener("load",function() {
+    document.getElementById("add").addEventListener("click",adding)
+})
+
+
+
+ -->

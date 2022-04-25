@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">   
+</head>
+
+<body>
+    <div id="container">  
+        <div class="todoContainer">
+            <h1>  <i class="fas fa-coffee"></i>To do app </h1>
+        </div>
+        <div class="todoItems">
+            <input type="text" id="todoItemsInput" placeholder="todo"/>
+            <button id="add">Add</button>
+            <!-- here some changes -->
+            <input type="hidden" id="currentIndex" placeholder="todo"/>
+            <button  style="display: none" id="saveEdit">Edit todo</button>
+        </div>
+        <div id="TodoModify">
+        </div>
+        <div class="todoTimers"> 
+            <h1>Remaining days<p id="TimeRemaining"></p> </h1>
+            <p id="currentDate"> </p>
+        </div>
+    </div>
+<script src="./scripts.js"></script>
+
+</body>
+</html>
+
+<!-- http://127.0.0.1:5500/index.html -->
